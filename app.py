@@ -56,7 +56,7 @@ def interactive():
         elif slack_req['type'] == 'message_action':
             callback_id = slack_req['callback_id']
             channel = slack_req['channel']['id']
-            message_ts = slack_req['message_ts']
+            message_ts = slack_req['ts']
             msg_text = slack_req['message']['text']
             if callback_id == 'reverse_text':
                 post_to_slack(url_post_message,
